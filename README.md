@@ -31,4 +31,4 @@ To output in PEM format given the two prime numbers used to create the RSA key (
 
 To output in DER format given the modulus (n) and private exponent (d) used (both passed as decimal/integers):
 
-`python3 rsatool3.py -f DER -o key.der -p 1230<REDACTED_FOR_SPACE>9521 -q 2921<REDACTED_FOR_SPACE>409`
+`python3 rsatool3.py -f DER -o key.der -n 2372<REDACTED_FOR_SPACE>2089 -d 4326<REDACTED_FOR_SPACE>2433`
