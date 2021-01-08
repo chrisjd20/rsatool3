@@ -5,6 +5,8 @@ from cryptography.hazmat.primitives import serialization
 import optparse
 import gmpy
 
+DEFAULT_EXP = 65537
+
 def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
@@ -19,8 +21,6 @@ def modinv(a, m):
     else:
         return x % m
 
-DEFAULT_EXP = 65537
-
 if __name__ == '__main__':
     
     parser = optparse.OptionParser()
@@ -32,7 +32,6 @@ if __name__ == '__main__':
     parser.add_option('-e', dest='e', help='public exponent (default: %d)' % DEFAULT_EXP, type='int', default=DEFAULT_EXP)
     parser.add_option('-o', dest='filename', help='output filename')
     parser.add_option('-f', dest='format', help='output format (DER, PEM) (default: PEM)', type='choice', choices=['DER', 'PEM'], default='PEM')
-    parser.add_option('-v', dest='verbose', help='also display CRT-RSA representation', action='store_true', default=False)
 
     try:
         (options, args) = parser.parse_args()
