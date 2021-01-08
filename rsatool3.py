@@ -3,9 +3,7 @@ from Crypto.PublicKey.RSA import construct
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
 import optparse
-import base64
 import gmpy
-import re
 
 def egcd(a, b):
     if a == 0:
