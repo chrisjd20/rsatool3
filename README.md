@@ -23,7 +23,7 @@ sudo apt install libgmp3-dev
 sudo python3 -m pip install gmpy
 ```
 
-## Usage:
+## Usage Examples:
 
 To output in PEM format given the two prime numbers used to create the RSA key (p, q):
 
